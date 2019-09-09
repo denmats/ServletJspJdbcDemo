@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>IdFilter</filter-name>
+  	<display-name>IdFilter</display-name>
+  	<description></description>
+  	<filter-class>com.denmats.web.filter.IdFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>NameTechFilter</filter-name>
+  	<display-name>NameTechFilter</display-name>
+  	<description></description>
+  	<filter-class>com.denmats.web.filter.NameTechFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>IdFilter</filter-name>
+  	<url-pattern>/getAlien</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>NameTechFilter</filter-name>
+  	<url-pattern>/createAlien</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>GetAlienController</servlet-name>
+  	<display-name>GetAlien</display-name>
+  	<description></description>
+  	<servlet-class>com.denmats.web.GetAlienController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateAlienController</servlet-name>
+  	<display-name>CreateAlien</display-name>
+  	<description></description>
+  	<servlet-class>com.denmats.web.CreateAlienController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetAlienController</servlet-name>
+  	<url-pattern>/getAlien</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateAlienController</servlet-name>
+  	<url-pattern>/createAlien</url-pattern>
+  </servlet-mapping>
+</web-app>
